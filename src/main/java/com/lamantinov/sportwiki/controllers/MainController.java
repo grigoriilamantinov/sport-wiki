@@ -26,7 +26,10 @@ public class MainController {
     }
 
     @GetMapping("/sports/{name}")
-    public String showSport(@PathVariable("name") final String name, final Model model){
+    public String showSport(
+        @PathVariable("name") final String name,
+        final Model model
+    ){
         model.addAttribute("sport", sportWikiService.getSportByName(name));
         return "sport-name";
     }

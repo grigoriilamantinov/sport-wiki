@@ -10,6 +10,7 @@ import java.util.List;
 
 @Component
 public class RequestToTheSportsDB implements Request {
+
     @Override
     @Cacheable("main_request")
     public List<Sport> getSportsList() {
