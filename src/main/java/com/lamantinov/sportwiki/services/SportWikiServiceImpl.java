@@ -25,11 +25,10 @@ public class SportWikiServiceImpl implements SportWikiService {
 
     @Override
     public Sport getSportByName(final String name) {
-        final var sportsList = this.getAllSports();
-        final var result = sportsList.stream()
-            .filter(sport -> sport.getStrSport().equals(name))
-            .collect(Collectors.toList());
-    return result.get(0);
+    return this.getAllSports().stream()
+        .filter(sport -> sport.getStrSport().equals(name))
+        .findFirst()
+        .orElse(new Sport());
     }
 
 }
