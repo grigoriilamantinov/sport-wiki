@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface SportWikiService {
     List<Sport> getAllSports();
+
+    Sport getSportByName(String name);
 }

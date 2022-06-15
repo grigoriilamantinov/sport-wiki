@@ -13,7 +13,7 @@ Hello, man
         <td th:text="${sports.getStrSport}">
         </td>
         <td>
-        <form th:method="GET" th:action="@{/sports/{id}(id=${sports.getIdSport()})}">
+        <form th:method="GET" th:action="@{/sports/{name}(name=${sports.getStrSport()})}">
             <button type="submit">MORE...</button>
         </form>
         </td>
