@@ -19,6 +19,11 @@ public class MainController {
         this.sportWikiService = sportWikiService;
     }
 
+    @GetMapping()
+    public String redirectToShowAllSports() {
+        return "redirect:/sports";
+    }
+
     @GetMapping("/sports")
     public String showAllSports(final Model model) {
         model.addAttribute("sportsList", sportWikiService.getAllSports());

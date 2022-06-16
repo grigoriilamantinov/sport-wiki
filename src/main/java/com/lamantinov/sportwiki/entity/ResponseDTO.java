@@ -14,7 +14,7 @@ import java.util.List;
 @EqualsAndHashCode
 @AllArgsConstructor
 public class ResponseDTO {
-    List<Sport> sports;
+    private List<Sport> sports;
 
     @Override
     public String toString() {

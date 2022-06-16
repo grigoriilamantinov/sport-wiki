@@ -28,7 +28,7 @@ public class SportWikiServiceImpl implements SportWikiService {
     return this.getAllSports().stream()
         .filter(sport -> sport.getStrSport().equals(name))
         .findFirst()
-        .orElse(new Sport());
+        .orElseThrow(() -> new IllegalStateException(String.format("There is no sports with name %s in DB", name)));
     }
 
 }

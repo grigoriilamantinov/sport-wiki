@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
+import java.util.Objects;
 
 @Component
 public class RequestToTheSportsDB implements Request {
@@ -20,6 +21,6 @@ public class RequestToTheSportsDB implements Request {
     public List<Sport> getSportsList() {
         RestTemplate restTemplate = new RestTemplate();
         final var responseEntity = restTemplate.getForEntity(URL, ResponseDTO.class);
-        return responseEntity.getBody().getSports();
+        return Objects.requireNonNull(responseEntity.getBody()).getSports();
     }
 }

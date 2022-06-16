@@ -12,12 +12,12 @@ import lombok.Setter;
 @EqualsAndHashCode
 @AllArgsConstructor
 public class Sport {
-    int idSport;
-    String strSport;
-    String strFormat;
-    String strSportThumb;
-    String strSportIconGreen;
-    String strSportDescription;
+    private int idSport;
+    private String strSport;
+    private String strFormat;
+    private String strSportThumb;
+    private String strSportIconGreen;
+    private String strSportDescription;
 
     @Override
     public String toString() {
