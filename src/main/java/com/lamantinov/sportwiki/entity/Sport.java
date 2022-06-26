@@ -28,4 +28,10 @@ public class Sport {
             ", strSportIconGreen='" + strSportIconGreen + '\'' +
             ", strSportDescription='" + strSportDescription + '\'';
     }
+
+    public Sport(int idSport, String strSport, String strFormat) {
+        this.idSport = idSport;
+        this.strSport = strSport;
+        this.strFormat = strFormat;
+    }
 }
