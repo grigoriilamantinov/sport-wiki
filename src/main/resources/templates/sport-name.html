@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sport</title>
+</head>
+<body>
+<h1 th:text="${sport.getStrSport}"> </h1>
+<table style="width:800px">
+    <tr>
+        <td th:text="${sport.getStrFormat}">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <br>
+        </td>
+    </tr>
+    <tr>
+        <td th:text="${sport.getStrSportDescription}">
+        </td>
+    </tr>
+</table>
+<br>
+<form th:method="GET" th:action="@{/sports}">
+    <button type="submit">BACK TO MAIN PAGE</button>
+</form>
+</body>
+</html>

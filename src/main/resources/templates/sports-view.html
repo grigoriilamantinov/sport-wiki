@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sports</title>
+</head>
+<body>
+Hello, man
+<table style="width:300px">>
+    <tr th:each="sports : ${sportsList}">
+        <td th:text="${sports.getIdSport}">
+        </td>
+        <td th:text="${sports.getStrSport}">
+        </td>
+        <td>
+        <form th:method="GET" th:action="@{/sports/{name}(name=${sports.getStrSport()})}">
+            <button type="submit">MORE...</button>
+        </form>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
